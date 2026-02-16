@@ -1,0 +1,54 @@
+HIV Drug Resistance Dataset - Task 1 Curation Statistics
+============================================================
+
+PRIMARY SOURCE FOR CUTOFFS:
+  Rhee SY et al. (2006). Genotypic predictors of HIV-1 drug
+  resistance. PNAS 103(46):17355-60. DOI:10.1073/pnas.0607274103
+
+CUTOFFS USED:
+  PI (all):      FC <= 3.0 = S  |  3.0-20  = I  |  >20  = H
+  NNRTI EFV/NVP: FC <= 3.0 = S  |  3.0-25  = I  |  >25  = H
+  NRTI AZT/3TC:  FC <= 3.0 = S  |  3.0-25  = I  |  >25  = H
+  D4T: 1.5/4.0 | DDI: 2.0/10 | ABC: 2.0/8 | TDF: 1.4/4.0
+  ETR/RPV/DOR: 3.0/25 | INI all: 2.5/10 (Stanford HIVDB BCO)
+
+NOVEL CONTRIBUTIONS:
+  Stage D: Jaccard mutation-set deduplication
+           threshold=0.85 on CompMutList parsed mutation sets
+  Stage E: Three-tier confidence weights (I tier conf=0.5)
+  Stage F: Subtype polymorphism flags for non-B sequences
+
+DATASET STATISTICS:
+
+[PI]
+  Raw -> Clinical -> Dedup -> Final: 4350 -> 4146 -> 3447 -> 1606 (36.9% retained)
+  Pairwise identity: 0.857 +/- 0.053
+  Shannon entropy:   0.417 bits (mean)
+  Non-B subtype:     7.7%
+  Active DRM sites:  31
+  Meets min 500:     True
+
+[NRTI]
+  Raw -> Clinical -> Dedup -> Final: 5355 -> 4913 -> 2970 -> 2163 (40.4% retained)
+  Pairwise identity: 0.926 +/- 0.027
+  Shannon entropy:   0.2 bits (mean)
+  Non-B subtype:     5.1%
+  Active DRM sites:  17
+  Meets min 500:     True
+
+[NNRTI]
+  Raw -> Clinical -> Dedup -> Final: 4911 -> 4034 -> 3385 -> 1584 (32.3% retained)
+  Pairwise identity: 0.932 +/- 0.022
+  Shannon entropy:   0.196 bits (mean)
+  Non-B subtype:     7.4%
+  Active DRM sites:  17
+  Meets min 500:     True
+
+[INI]
+  Raw -> Clinical -> Dedup -> Final: 1986 -> 1177 -> 722 -> 565 (28.4% retained)
+  Pairwise identity: 0.946 +/- 0.018
+  Shannon entropy:   0.165 bits (mean)
+  Non-B subtype:     21.9%
+  Active DRM sites:  11
+  Meets min 500:     True
+
