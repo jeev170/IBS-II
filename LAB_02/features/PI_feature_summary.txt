@@ -1,0 +1,21 @@
+ESM-2 Feature Extraction Summary: PI
+=======================================================
+
+Model: facebook/esm2_t33_650M_UR50D
+Layer: 33 (last layer)
+Embedding dimension: 1,280
+Sequences processed: 1606
+
+Feature shapes:
+  F1 (global mean):   (1606, 1280)
+  F2 (mutant mean):   (1606, 1280)  [novel]
+  F3 (delta):         (1606, 1280)  [novel]
+  Combined:           (1606, 3840)
+
+Feature statistics:
+  F1: mean=-0.0008  std=0.2059  min=-7.3808  max=0.4995
+  F2: mean=-0.0010  std=0.2283  min=-8.2698  max=1.3698
+  F3: mean=-0.0000  std=0.0161  min=-0.7254  max=0.1859
+
+Wildtype reference: HXB2 PR (99 amino acids)
+Source: GenBank K03455.1
